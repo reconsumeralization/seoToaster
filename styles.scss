@@ -1,0 +1,235 @@
+@import 'mixins.scss';
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  overflow-x: hidden;
+}
+
+.header {
+  background-image: url("images/header_bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+
+  li > a {
+    @include nav-items;
+    transition: color 0.3s ease-out;
+
+    &:hover {
+      color: #8d7cd0;
+    }
+  }
+
+  ul > span {
+    @include nav-items;
+  }
+
+  .fa-bars {
+    color: #fff;
+  }
+}
+
+.about {
+
+  &__article {
+    margin-left: 100px;
+    padding-bottom: 80px;
+  }
+
+  &__article h2 {
+    font-family: "Raleway", sans-serif;
+    font-size: 46px;
+    font-weight: bold;
+  }
+
+  &__info {
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+  }
+
+  &__muted {
+    color: #6c6c6c;
+    letter-spacing: 1px;
+  }
+
+  &__aside {
+    margin-top: 60px;
+    margin-left: 20px;
+  }
+
+  &__features {
+    list-style: none;
+
+    li {
+      color: #6c6c6c;
+
+      &::before {
+        content: "■";
+        color: #8d7cd0;
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+      }
+    }
+  }
+}
+
+.customers {
+  background-color: #f0f0f0;
+  padding: 100px 0;
+
+  &__description_left {
+    padding-left: 55px;
+    color: #6c6c6c;
+  }
+
+  &__description_right {
+    padding-right: 55px;
+    text-align: right;
+    color: #6c6c6c;
+  }
+
+  &__heading_left {
+    padding-left: 5px;
+    @include customers-heading;
+  }
+
+  &__heading_right {
+    padding-right: 5px;
+    @include customers-heading;
+  }
+
+  &__toaster {
+    margin: 0 100px;
+  }
+
+  aside > div:first-child {
+    margin-bottom: 100px;
+  }
+}
+
+.contact {
+  fieldset {
+    border: 2px solid #f6f6f6;
+    padding: 8px 140px;
+
+    input {
+      height: 45px;
+    }
+
+    textarea {
+      height: 115px;
+      resize: none;
+    }
+
+    legend {
+      font-size: 48px;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+
+    input,
+    textarea {
+      background-color: #f8f8f8;
+    }
+  }
+
+  &__form_submit {
+    width: 180px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    height: 50px;
+    color: white;
+    background-color: #6556df;
+    font-size: 18px;
+    transition: background-color 0.3s ease-in;
+
+    &:hover {
+      background-color: #4335ce;
+    }
+  }
+
+  &__label {
+    font-size: 18px;
+    position: relative;
+
+    &::after {
+      content: "*";
+      color: red;
+      position: absolute;
+      right: 8px;
+      top: 28px;
+    }
+  }
+
+  &__info {
+    color: #6c6c6c;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .header {
+    background-image: url("images/mobile_bg.png");
+    background-position: center left;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .customers {
+    &__toaster {
+      margin: 40px 10px;
+    }
+  }
+
+  .header {
+    .navbar-nav {
+      align-items: flex-end !important;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 20px;
+    }
+
+    .navbar-collapse {
+      width: 100vw;
+    }
+
+    li > a {
+      color: white;
+      margin-right: 10px;
+    }
+  }
+
+  .about {
+    &__aside {
+      text-align: center;
+      margin-bottom: 10px;
+      margin-left: 0;
+
+      img {
+        max-width: 300px;
+      }
+    }
+
+    &__article {
+      margin-left: 0;
+    }
+  }
+
+  .contact {
+
+    fieldset {
+      padding: 10px;
+
+      legend {
+        font-size: 32px;
+        white-space: nowrap;
+      }
+    }
+  }
+}

@@ -1,0 +1,196 @@
+@charset "UTF-8";
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  overflow-x: hidden;
+}
+
+.header {
+  background-image: url("images/header_bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+}
+.header li > a {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fefefe;
+  transition: color 0.3s ease-out;
+}
+.header li > a:hover {
+  color: #8d7cd0;
+}
+.header ul > span {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fefefe;
+}
+.header .fa-bars {
+  color: #fff;
+}
+
+.about__article {
+  margin-left: 100px;
+  padding-bottom: 80px;
+}
+.about__article h2 {
+  font-family: "Raleway", sans-serif;
+  font-size: 46px;
+  font-weight: bold;
+}
+.about__info {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+}
+.about__muted {
+  color: #6c6c6c;
+  letter-spacing: 1px;
+}
+.about__aside {
+  margin-top: 60px;
+  margin-left: 20px;
+}
+.about__features {
+  list-style: none;
+}
+.about__features li {
+  color: #6c6c6c;
+}
+.about__features li::before {
+  content: "■";
+  color: #8d7cd0;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.customers {
+  background-color: #f0f0f0;
+  padding: 100px 0;
+}
+.customers__description_left {
+  padding-left: 55px;
+  color: #6c6c6c;
+}
+.customers__description_right {
+  padding-right: 55px;
+  text-align: right;
+  color: #6c6c6c;
+}
+.customers__heading_left {
+  padding-left: 5px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.customers__heading_right {
+  padding-right: 5px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.customers__toaster {
+  margin: 0 100px;
+}
+.customers aside > div:first-child {
+  margin-bottom: 100px;
+}
+
+.contact fieldset {
+  border: 2px solid #f6f6f6;
+  padding: 8px 140px;
+}
+.contact fieldset input {
+  height: 45px;
+}
+.contact fieldset textarea {
+  height: 115px;
+  resize: none;
+}
+.contact fieldset legend {
+  font-size: 48px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+.contact fieldset input,
+.contact fieldset textarea {
+  background-color: #f8f8f8;
+}
+.contact__form_submit {
+  width: 180px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  height: 50px;
+  color: white;
+  background-color: #6556df;
+  font-size: 18px;
+  transition: background-color 0.3s ease-in;
+}
+.contact__form_submit:hover {
+  background-color: #4335ce;
+}
+.contact__label {
+  font-size: 18px;
+  position: relative;
+}
+.contact__label::after {
+  content: "*";
+  color: red;
+  position: absolute;
+  right: 8px;
+  top: 28px;
+}
+.contact__info {
+  color: #6c6c6c;
+}
+
+@media screen and (max-width: 840px) {
+  .header {
+    background-image: url("images/mobile_bg.png");
+    background-position: center left;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .customers__toaster {
+    margin: 40px 10px;
+  }
+
+  .header .navbar-nav {
+    align-items: flex-end !important;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 20px;
+  }
+  .header .navbar-collapse {
+    width: 100vw;
+  }
+  .header li > a {
+    color: white;
+    margin-right: 10px;
+  }
+
+  .about__aside {
+    text-align: center;
+    margin-bottom: 10px;
+    margin-left: 0;
+  }
+  .about__aside img {
+    max-width: 300px;
+  }
+  .about__article {
+    margin-left: 0;
+  }
+
+  .contact fieldset {
+    padding: 10px;
+  }
+  .contact fieldset legend {
+    font-size: 32px;
+    white-space: nowrap;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
